@@ -1,0 +1,40 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+li ,ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+h1, h2 {
+    font-weight: 300px;
+    line-height:1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+    font-family: "karla", sans-serif;
+    font-weight: 700
+}
+
+figcaption {
+    margin-left: 10px;
+    font-size: 12px;
+
+}

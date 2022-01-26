@@ -1,0 +1,42 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+li ,ul {
+    display: block;
+    list-style-type: none;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+p {
+       margin: 10px 0;
+    font-family: "karla", sans-serif;
+    font-weight: 700
+}
+
+figcaption {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+button {
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: .5rem;
+    background-color: #a8a8a8;
+    font-weight: bolder;
+
+}
