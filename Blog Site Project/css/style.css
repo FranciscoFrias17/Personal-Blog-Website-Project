@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+li ,ul {
+    display: block;
+    list-style-type: none;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+/* Grid layout for blog */
+.blog-container {
+    height: 100vh;
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 150px 1fr 100px;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "footer"
+}
+
+header {
+    grid-area: header;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+    border-bottom: solid red;
+    color: whitesmoke;
+    padding: 20px;
+    background-color: #5E5E5E;
+}
+
+main {
+    grid-area: main;
+}
+nav {
+    grid-area: sidebar;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    line-height: 2rem;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    border-top: solid red;
+    color: whitesmoke;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #5E5E5E;
+}
+
+/* card article elements */
+.blog-card {
+    overflow: hidden;
+    box-shadow: 0px 2px 5px;
+    background-color: white;
+    border-radius: 0.5rem;
+    position: relative;
+    width: 1fr;
+    margin: 1rem;
+}
+
+.card-img {
+    
+    object-fit: cover;
+    height: 14rem;
+    width: 100%;
+}
+
+.card-text {
+    margin: 2rem;
+}
+
+.blog-title {
+    line-height: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #000DC3;
+}
+
+.blog-description {
+    font-size: 0.9rem;
+}
+.sidebar {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+/* media queries for different sizes */
+/*larger screen*/
+@media (min-width: 768px) {
+    .blog-container {
+        display: grid;
+        grid-template-columns: 3fr 150px;
+        grid-template-rows: 100px 3fr 75px;
+        grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer";
+    }
+}

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+li ,ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+h1, h2 {
+    font-weight: 300px;
+    line-height:1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+/* Grid layout for blog */
+.blog-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 300px 100px;
+    grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "footer"
+}
+
+header {
+    grid-area: header;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+    border-bottom: solid red;
+    color: whitesmoke;
+    padding: 2px;
+    background-color: #5E5E5E;
+}
+
+main {
+    grid-area: main;
+    margin: 5px;
+}
+
+aside {
+    grid-area: sidebar;
+    margin: 5px;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    border-top: solid red;
+    color: whitesmoke;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #5E5E5E;
+}
+
+/* Article Post Elements */
+.card-img {
+    height: 300px;
+    border: solid black;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.blog-title {
+    line-height: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #000DC3;
+    text-align: center;
+}
+/* About Me elements */
+.mypicture {
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    border: solid black;
+
+}
+
+/* media queries for different sizes */
+/*larger screen*/
+@media (min-width: 768px) {
+    .blog-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 100px 3fr 75px;
+        grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer";
+    }
+}
+/* Desktops / Laptops */
+@media (min-width: 1000px) {
+    .blog-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 100px 3fr 75px;
+        grid-template-areas: 
+        "header header header"
+        "main main  sidebar"
+        "footer footer footer";
+    }
+}
